@@ -1,3 +1,7 @@
+.root{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+img{
+  width: 250px;
+  height: 250px;
+}
+p{
+  width: 250px;
+  height: 80px;
+}
+button{
+  position: absolute;
+  margin-left: 86px !important;
+}
+.vote{
+  font-weight: bolder;
+  width: 10%;
+  margin: auto;
+  color: #e1701a;
+  font-size: larger;
+}
+.Container {
+  float: left;
+  height: 500px;
+  margin: 30px;
 }

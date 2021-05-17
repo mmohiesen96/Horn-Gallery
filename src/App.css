@@ -1,5 +1,6 @@
 .root{
   box-sizing: border-box;
+  margin: auto;
 }
 
 .App {
@@ -50,8 +51,7 @@ p{
   height: 80px;
 }
 button{
-  position: absolute;
-  margin-left: 86px !important;
+  width: 100%;
 }
 .vote{
   font-weight: bolder;

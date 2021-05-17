@@ -24,7 +24,7 @@ class Footer extends React.Component {
                 <Button variant="outline-primary" className={'button'}>Primary</Button>{' '}
                 <p>{this.state.vote}</p> */}
                 <Card style={{ width: '18rem' }} className="Container">
-                    <Card.Img variant="top" src={this.props.imgURL} alt={"Markhor"}  />
+                    <Card.Img variant="top" src={this.props.imgURL} alt={this.props.title}  />
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>

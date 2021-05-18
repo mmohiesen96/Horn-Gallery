@@ -9,31 +9,34 @@ class HornedBeasts extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-        vote: 0,
-        loading: false
+        vote: 0
     }
 }
 
 handleClick = () => {
-    this.setState({ loading: true });
     this.setState({
         vote: this.state.vote + 1,
     })
 }
 
+sendInfo = () => {
+    this.props.show(this.props.title);
+}
+
 render() {
     return (
-        <div>
+        <div >
             {/* <h2>{this.props.title}</h2>
                 <img src={this.props.imgURL} alt={"Markhor"} onClick={this.handleClick} />
                 <p>{this.props.description}</p>
                 <Button variant="outline-primary" className={'button'}>Primary</Button>{' '}
                 <p>{this.state.vote}</p> */}
-            <Card style={{ width: '18rem' }} className="Container">
-                <Card.Img variant="top" src={this.props.imgURL} alt={this.props.title} />
-                <Card.Body>
+
+            <Card style={{ width: '18rem' }} className="Container" >
+                <Card.Img variant="top" src={this.props.imgURL} alt={this.props.title}   onClick = {this.sendInfo}/>
+                <Card.Body >
                     <Card.Title>{this.props.title}</Card.Title>
-                    <Card.Text>
+                    <Card.Text  onClick = {this.sendInfo}>
                         {this.props.description}
                     </Card.Text>
                     <Card.Text className='vote'>

@@ -23,6 +23,9 @@ class App extends React.Component {
       if (element.title === param) {
         return element;
       }
+      else {
+        return "";
+      }
     });
     this.setState({
       elementFound: result,

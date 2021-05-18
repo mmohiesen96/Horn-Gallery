@@ -26,12 +26,6 @@ sendInfo = () => {
 render() {
     return (
         <div >
-            {/* <h2>{this.props.title}</h2>
-                <img src={this.props.imgURL} alt={"Markhor"} onClick={this.handleClick} />
-                <p>{this.props.description}</p>
-                <Button variant="outline-primary" className={'button'}>Primary</Button>{' '}
-                <p>{this.state.vote}</p> */}
-
             <Card style={{ width: '18rem' }} className="Container" >
                 <Card.Img variant="top" src={this.props.imgURL} alt={this.props.title}   onClick = {this.sendInfo}/>
                 <Card.Body >

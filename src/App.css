@@ -59,9 +59,11 @@ button{
   margin: auto;
   color: #e1701a;
   font-size: larger;
+  height: 45px;
 }
 .Container {
   float: left;
   height: 500px;
   margin: 30px;
+  box-sizing: border-box;
 }

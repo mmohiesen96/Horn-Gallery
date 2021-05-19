@@ -49,7 +49,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Main arr={this.state.arr} show={this.showModal} title={imgArr.title}/>
+        <Main arr={this.state.arr} show={this.showModal}/>
         <SelectedBeast info={this.state.arr} 
         showBeast = {this.state.showBeast} 
         hideModal = {this.hideModal} 

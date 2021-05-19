@@ -9,8 +9,10 @@ class HornedBeasts extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-        vote: 0
+        vote: 0,
+        title : this.props.title
     }
+    console.log(props);
 }
 
 handleClick = () => {
@@ -27,7 +29,7 @@ render() {
     return (
         <div >
             <Card style={{ width: '18rem' }} className="Container" >
-                <Card.Img variant="top" src={this.props.imgURL} alt={this.props.title}   onClick = {this.sendInfo}/>
+                <Card.Img variant="top"   src={this.props.imgURL} alt={this.props.title}   onClick = {this.sendInfo} />
                 <Card.Body >
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text  onClick = {this.sendInfo}>

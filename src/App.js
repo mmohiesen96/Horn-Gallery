@@ -9,18 +9,22 @@ import SelectedBeast from './components/SelectedBeast';
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       arr: imgArr,
       elementFound :{
       },
       showBeast: false,
     }
+    console.log(props);
   }
-
-  showModal = (param) =>{
+  
+  liftStateUp = (Main) =>{
+    this.setState({ activeNode: Main})
+  }
+  showModal = (itemFound) =>{
     let result = imgArr.find(element => {
-      if (element.title === param) {
+      if (element.title === itemFound) {
         return element;
       }
       else {
@@ -44,9 +48,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.props.imgURL}</h1>
         <Header />
-        <Main arr={this.state.arr} show={this.showModal} />
+        <Main arr={this.state.arr} show={this.showModal} title={imgArr.title}/>
         <SelectedBeast info={this.state.arr} 
         showBeast = {this.state.showBeast} 
         hideModal = {this.hideModal} 
